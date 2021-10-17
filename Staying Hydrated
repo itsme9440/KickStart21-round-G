@@ -1,0 +1,26 @@
+link: https://codingcompetitions.withgoogle.com/kickstart/round/00000000004362d6/00000000008b3a1c
+
+solution:
+
+import java.util.*;
+public class Solution
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int test=sc.nextInt();
+		for(int i=1;i<=test;i++){
+		    int n=sc.nextInt();
+		    int arr[]=new int[2*n];
+		    int brr[]=new int[2*n];
+		    for(int j=0;j<2*n;j++){
+		        arr[j]=sc.nextInt();
+		        brr[j]=sc.nextInt();
+		    }
+		    Arrays.sort(arr);
+		    Arrays.sort(brr);
+		    int a=Math.min(arr[n],arr[n-1]);
+		    int b=Math.min(brr[n],brr[n-1]);
+		    System.out.println("case #"+i+": "+a+" "+b);
+		}
+	}
+}
